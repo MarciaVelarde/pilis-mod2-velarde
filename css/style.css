@@ -7,12 +7,26 @@
     padding: 0;
 }
 
+/* Paleta de colores CSS HEX */
+:root{
+    --dark: #0f0f0f;
+    --space-cadet: #252932;
+    --grey: #353A48;
+    --amber: #F7AF1B;
+    --orange-pantone: #fb5607ff;
+    --winter-sky: #F42D93;
+    --blue-violet: #8338ecff;
+    --azure: #056EAF;
+    --tiffany-blue: #6CC5C1;
+    --white: #ffffff;
+}
+
 /* General */
 html,
 body {
     font-family: "Montserrat", sans-serif;
-    background: #252932;
-    color: #ffffff;
+    background: var(--space-cadet);
+    color: var(--white);
 }
 
 a {
@@ -23,14 +37,14 @@ a {
 header {
 	width:100%; /* Establecemos que el header abarque el 100% del documento */
 	overflow:hidden; /* Eliminamos errores de float */
-	background:#0f0f0f;
+	background:var(--dark);
     display: flex;
     flex-direction: column;
     padding-top: 25px;
 }
 
 .wrapper {
-	width:95%; /* Establecemos que el ancho sera del 90% */
+	width:95%; /* Establecemos que el ancho sera del 95% */
 	max-width:1000px; /* Aqui le decimos que el ancho máximo sera de 1000px */
 	margin:auto; /* Centramos los elementos */
 	overflow:hidden; /* Eliminamos errores de float */
@@ -48,7 +62,7 @@ header nav {
 
 header nav a {
 	display:inline-block;
-	color:#fff;
+	color:var(--white);
 	text-decoration:none;
 	padding:10px 20px;
 	line-height:normal;
@@ -60,19 +74,19 @@ header nav a {
 }
 
 header nav a.quienesSomos:hover {
-	background:#F7AF1B;
+	background:var(--amber);
 	border-radius:50px;
 }
 header nav a.evento:hover {
-	background:#F42D93;
+	background:var(--winter-sky);
 	border-radius:50px;
 }
 header nav a.registro:hover {
-	background:#056EAF;
+	background:var(--azure);
 	border-radius:50px;
 }
 header nav a.pronostico:hover {
-	background:#6CC5C1;
+	background:var(--tiffany-blue);
 	border-radius:50px;
 }
 
@@ -119,7 +133,7 @@ h2 {
     font-size: 50px;
     text-transform: uppercase;
     font-weight: 300;
-    color: #FFF;
+    color: var(--white)
 }
 
 p {
@@ -138,7 +152,7 @@ p {
 
 /* Home */
 #home{
-    background-color: #353A48;
+    background-color: var(--grey);
 }
 
 #home div.container{
@@ -179,7 +193,7 @@ p {
 }
 
 .home-text span.title-two {
-    color: #F42D93;
+    color: var(--winter-sky);
     font-size: 70px;
     font-weight: 600;
 }
@@ -224,7 +238,7 @@ p {
     text-transform: uppercase;
     font-weight: 500;
     font-size: 46px;
-    color: #F7AF1B;
+    color: var(--amber);
 }
 
 .about-text .title-one {
@@ -239,7 +253,7 @@ p {
 
 /* Evento */
 #evento{
-    background-color: #353A48;
+    background-color: var(--grey);
 }
 
 #evento div.container{
@@ -268,7 +282,7 @@ p {
     text-transform: uppercase;
     font-weight: 500;
     font-size: 46px;
-    color:#F42D93;
+    color:var(--winter-sky);
 }
 
 .evento-text .large {
@@ -304,7 +318,7 @@ p {
     text-transform: uppercase;
     font-weight: 500;
     font-size: 46px;
-    color:#056EAF;
+    color:var(--azure);
 }
 
 .contact-text .large {
@@ -312,6 +326,7 @@ p {
     font-size: 1.15rem;
 }
 
+/* Formulario */
 form .form-group {
     margin-bottom: 1rem;
 }
@@ -322,7 +337,6 @@ form input{
 }
 
 form .form-control {
-    /* display: block; */
     width: 100%;
     padding: 0.375rem 0.7rem;
     font-size: 1rem;
@@ -330,7 +344,7 @@ form .form-control {
     border: none;
 }
 
-/* Boton Form */
+/* Boton Formulario */
 .btn {
     display: inline-block;
     font-size: 15px;
@@ -343,23 +357,22 @@ form .form-control {
 }
 
 .btn-light {
-    background: #056EAF;
-    border: 1px solid #056EAF;
-    color: #fff;
+    background: var(--azure);
+    border: 1px solid var(--azure);
+    color: var(--white);
     width: 100%;
 }
 
 .btn-light:hover {
-    background: #6CC5C1;
-    border: 1px solid #6CC5C1;
-    color: #ffffff;
+    background: var(--tiffany-blue);
+    border: 1px solid var(--tiffany-blue);
+    color: var(--white);
 }
 
 /* Pronostico */
-
 #pronostico {
     padding: 50px 0;
-    background-color: #353A48;
+    background-color: var(--grey);
 }
 
 #pronostico div.container{
@@ -371,7 +384,7 @@ form .form-control {
 .pronostico-img {
     float: right;
     width: 50%;
-    background-color: #ffffff;
+    background-color: var(--white);
 }
 
 .pronostico-img canvas {
@@ -389,7 +402,7 @@ form .form-control {
     text-transform: uppercase;
     font-weight: 500;
     font-size: 46px;
-    color: #6CC5C1;
+    color: var(--tiffany-blue);
 }
 
 .pronostico-text .title-one {
@@ -410,7 +423,7 @@ footer {
     background-color: var(--primary-color-dark);
     color: var(--accent-color);
     padding: 20px;
-    background-color: #0f0f0f;
+    background-color: var(--dark);
   }
   
   .footer-section-container {
@@ -438,8 +451,8 @@ footer {
   }
   
   .social-icons a{
-    background-color:#252932;
-    color:#ffffff;
+    background-color:var(--space-cadet);
+    color:var(--white);
     font-size:22px;
     display:inline-block;
     line-height:44px;
@@ -452,32 +465,12 @@ footer {
   
   .social-icons a:active,.social-icons a:focus,.social-icons a:hover
   {
-    color:#fff;
+    color:var(--white);
     background-color:#53CE60;
     transform:scale(1.1); 
     -webkit-transform:scale(1.1);
   }
   
-  .social-icons a.facebook:hover
-  {
-    background-color:#0572E6
-  }
-  .social-icons a.twitter:hover
-  {
-    background-color:#00aced
-  }
-  .social-icons a.linkedin:hover
-  {
-    background-color:#007bb6
-  }
-  .social-icons a.github:hover
-  {
-    background-color:#676a6e
-  }
-  .social-icons a.instagram:hover
-  {
-    background-color:#BA34A0
-  }
   .tech-icons-container {
     background-color: rgba(255, 255, 255, 0.801);
     border-radius: 5px;
