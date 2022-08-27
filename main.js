@@ -58,3 +58,50 @@ function cleanForm() {
 
 const submitFormButton = document.getElementById("submitFormButton")
 submitFormButton.addEventListener("click", onSubmitForm)
+
+const renderTemperatureChart = () => {
+
+    const ciudadCulturalLocation = {
+        latitude: -24.183221938956596,
+        longitude: -65.33124425818666,
+    }
+
+    const temperatureRequest = new Request(`https://api.open-meteo.com/v1/forecast?latitude=${ciudadCulturalLocation.latitude}&longitude=${ciudadCulturalLocation.longitude}&daily=temperature_2m_max,temperature_2m_min&timezone=America/Argentina/Jujuy`)
+
+    fetch(temperatureRequest)
+        .then((response) => response.json())
+        .then((data) => {
+            console.log(data);
+            
+            const chartData = {
+                labels: data.daily.time,
+                datasets: [{
+                    label: 'Maxima',
+                    backgroundColor: 'rgb(255, 99, 132)',
+                    borderColor: 'rgb(255, 99, 132)',
+                    data: data.daily.temperature_2m_max,
+                },
+                {
+                    label: 'Minima',
+                    backgroundColor: 'rgb(0, 99, 132)',
+                    borderColor: 'rgb(0, 99, 132)',
+                    data: data.daily.temperature_2m_min,
+                }]
+            };
+        
+            const config = {
+                type: 'line',
+                data: chartData,
+                options: {}
+            };
+            const myChart = new Chart(
+                document.getElementById('myChart'),
+                config
+            );
+        })
+        .catch((err) => {
+            console.log(err)
+        });
+}
+
+renderTemperatureChart()
