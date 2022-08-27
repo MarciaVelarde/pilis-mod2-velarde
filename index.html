@@ -9,7 +9,7 @@
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="main.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>ExpoJuy</title>
 </head>
 
@@ -110,20 +110,20 @@
             <div class="container">
 
                 <div class="contact-form">
-                    <form action="">
+                    <form id="form">
                         <div class="form-group">
-                            <label for="name">Comercio</label>
-                            <input class="form-control" type="text">
+                            <label for="name">Nombre del Comercio</label>
+                            <input id="name" class="form-control" type="text">
                         </div>
                         <div class="form-group">
-                            <label for="name">Titular</label>
-                            <input class="form-control" type="email">
+                            <label for="email">Email del Titular</label>
+                            <input id="email" class="form-control" type="email">
                         </div>
                         <div class="form-group">
-                            <label for="name">Celular</label>
-                            <input class="form-control" type="number">
+                            <label for="phone">Celular</label>
+                            <input id="phone" class="form-control" type="number">
                         </div>
-                        <button class="btn btn-light">Enviar</button>
+                        <button id="submitFormButton" class="btn btn-light">Enviar</button>
                     </form>
                 </div>
 
@@ -177,7 +177,7 @@
             </p>
         </div>
     </footer>
-
+    <script src="main.js"></script>
 </body>
 
 </html>
