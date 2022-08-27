@@ -113,6 +113,21 @@ header nav a.pronostico:hover {
 	}
 }
 
+/* General */
+
+h2 {
+    font-size: 50px;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: #FFF;
+}
+
+p {
+    font-size: 1rem;
+    margin: 10px 0;
+    line-height: 1.7em;
+}
+
 /* Para todas los conteiner */
 .container {
     margin: auto;
@@ -219,27 +234,18 @@ header nav a.pronostico:hover {
 
 .about-text .large {
     padding-bottom: 10px;
-    font-size: 1.25rem;
-}
-
-
-/* General */
-h2 {
-    font-size: 50px;
-    text-transform: uppercase;
-    font-weight: 300;
-    color: #FFF;
-}
-
-p {
-    font-size: 1rem;
-    margin: 10px 0;
-    line-height: 1.7em;
+    font-size: 1.1rem;
 }
 
 /* Evento */
 #evento{
     background-color: #353A48;
+}
+
+#evento div.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .evento-img {
@@ -267,6 +273,7 @@ p {
 
 .evento-text .large {
     padding-top: 20px;
+    font-size: 1.15rem;
 }
 
 /* Contact */
@@ -302,10 +309,16 @@ p {
 
 .contact-text .large {
     padding-top: 20px;
+    font-size: 1.15rem;
 }
 
 form .form-group {
     margin-bottom: 1rem;
+}
+
+form input{
+    margin-top: 8px;
+    border-radius: 4px;
 }
 
 form .form-control {
@@ -358,9 +371,10 @@ form .form-control {
 .pronostico-img {
     float: right;
     width: 50%;
+    background-color: #ffffff;
 }
 
-.pronostico-img img {
+.pronostico-img canvas {
     width: 90%;
 }
 
@@ -439,7 +453,7 @@ footer {
   .social-icons a:active,.social-icons a:focus,.social-icons a:hover
   {
     color:#fff;
-    background-color:#29aafe;
+    background-color:#53CE60;
     transform:scale(1.1); 
     -webkit-transform:scale(1.1);
   }

@@ -18,7 +18,7 @@
 
     <header>
         <div class="wrapper">
-            <img class="logo" src="assets/logo.png" alt="">
+            <a href="#home"><img class="logo" src="assets/logo.png" alt=""></a>
 
             <nav>
                 <a class="quienesSomos" href="#about">Quiénes somos</a>
@@ -84,11 +84,6 @@
         <section id="evento">
 
             <div class="container">
-                <div class="evento-img">
-                    <video width="640" height="450" controls>
-                        <source src="assets/video.mp4"  type="video/mp4" />
-                    </video>
-                </div>
 
                 <div class="evento-text">
                     <h1>El evento<br>
@@ -103,6 +98,12 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet
                         luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim.</p>
                 </div>
+
+                <div class="evento-img">
+                    <video width="640" height="400" controls>
+                        <source src="assets/video.mp4"  type="video/mp4" />
+                    </video>
+                </div>
             </div>
 
         </section>
@@ -113,15 +114,15 @@
                 <div class="contact-form">
                     <form id="form">
                         <div class="form-group">
-                            <label for="name">Nombre del Comercio</label>
+                            <label for="name"><i class="bi bi-shop"></i>   Nombre del Comercio</label>
                             <input id="name" class="form-control" type="text">
                         </div>
                         <div class="form-group">
-                            <label for="email">Email del Titular</label>
+                            <label for="email"><i class="bi bi-envelope"></i>   Email del Titular</label>
                             <input id="email" class="form-control" type="email">
                         </div>
                         <div class="form-group">
-                            <label for="phone">Celular</label>
+                            <label for="phone"><i class="bi bi-telephone"></i>   Celular</label>
                             <input id="phone" class="form-control" type="number">
                         </div>
                         <button id="submitFormButton" class="btn btn-light">Enviar</button>
@@ -131,8 +132,7 @@
                 <div class="contact-text">
                     <h1>Formulario de <br> contacto
                     </h1>
-                    <p class="large">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet
-                        luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim.</p>
+                    <p class="large">Sumate al evento para potenciar el comercio local. Luego te contactaremos.</p>
                     <p>Cras non dictum ullamcorper vel id tincidunt. Egestas risus, tortor sagittis, ornare morbi.
                         Dictum in a pulvinar elit. Sollicitudin cras quis sapien in venenatis egestas elementum. A augue
                         nisi fames lectus penatibus facilisis elementum, sapien praesent. Eu accumsan facilisi orci
@@ -151,11 +151,10 @@
                     <h1>Pronóstico <br>del clima
                     </h1>
                     <p class="large">La temperatura (°C) de los proximos 7 dias en la Ciudad Cultural</p>
-                    <canvas id="myChart"></canvas>
                 </div>
 
                 <div class="pronostico-img">
-                    <img src="assets/home.jpg" alt="">
+                    <canvas id="myChart"></canvas>
                 </div>
             </div>
 
@@ -166,12 +165,12 @@
     <footer>
         <div class="footer-section-container">
             <ul class="social-icons">
-                <li><a class="whatsapp" href="https://api.whatsapp.com/send?phone=+54123456789&text=Hola%2C%20me%20interesa%20participar%20en%20la%20EXPOJUY"><i class="bi bi-whatsapp"></i></a></li>
+                <li><a class="whatsapp" target="_blank" href="https://api.whatsapp.com/send?phone=+54123456789&text=Hola%2C%20me%20interesa%20participar%20en%20la%20EXPOJUY"><i class="bi bi-whatsapp"></i></a></li>
             </ul>
         </div>
         <div class="footer-section-container">
             <p>
-                &copy; 2022 - <a class="footer-link" href="https://www.linkedin.com">Marcia Velarde y Joaquin Ramos</a>
+                &copy; 2022 - <a class="footer-link" href="https://www.linkedin.com">Marcia Velarde - Joaquin Ramos</a>
             </p>
         </div>
     </footer>
